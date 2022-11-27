@@ -8,11 +8,11 @@ module.exports = {
         'nav-shadow':'0px 3px 5px 0px rgba(0, 0, 0, 0.49)'
       },
       colors:{
-        'custombrown':'#555b61',
-        'customgreen':'#146046'
+        'custom-brown':'#555b61',
+        'custom-green':'#146046'
       },
       backgroundImage:{
-        'login-image':'linear-gradient(rgba(0,1,0, 0.5),rgba(0,4,0, 0.5)), url("../src/assets/images/pexels-monstera-6281709.jpg")'
+        'login-image':'linear-gradient(rgba(0.5,1,0, 0.6),rgba(0,4,0, 0.6)), url("../src/assets/images/pexels-monstera-6281709.jpg")'
       }
     },
     fontFamily: {

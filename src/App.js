@@ -1,10 +1,9 @@
-import Navbar from "./Components/Navbar.js/Navbar";
-import Login from "./Pages/Login/Login";
+import LecturerMainDashboard from "./Pages/lecturers_pages/LecturerMainDashboard";
+
 function App() {
   return (
-    <div className="p-0 m-0">
-      <Navbar/>
-      <Login/>
+    <div>
+      <LecturerMainDashboard />
     </div>
   );
 }

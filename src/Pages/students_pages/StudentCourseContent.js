@@ -2,10 +2,10 @@ import React from 'react'
 import Hll from '../../../src/assets/images/Hll.png'
 import HllVideo from '../../../src/assets/videos/Higher_level_and_lower_level_languages_Computer_Science_Wiki.mkv'
 import HllAudio from '../../../src/assets/audio/file_example_MP3_700KB.mp3'
-import { BsPencilSquare } from 'react-icons/bs'
+// import { BsPencilSquare } from 'react-icons/bs'
 import PdfImage from '../../../src/assets/images/pdf.png'
 
-function LectuerCourseContent() {
+function StudentCourseContent() {
   return (
     <div className='px-10 py-11 h-full'>
         <div className='w-full p-6 bg-white rounded-md flex flex-col gap-6'>
@@ -15,10 +15,6 @@ function LectuerCourseContent() {
                         <div className='flex flex-col'>
                             <h1 className='text-3xl font-bold '>Introduction to Programming</h1>
                             <p className='text-sm text-black'>Session: 2022/2023</p>
-                        </div>
-                        <div className='py-3 px-5 flex flex-row bg-custom-green-two rounded-md items-center gap-2 cursor-pointer group hover:bg-custom-brown'>
-                            <p className='text-base font-medium text-white group-hover:text-custom-off-white'>Add Lesson</p>
-                            <BsPencilSquare className='text-base text-white'/>
                         </div>
                     </div>
                 </div>
@@ -35,9 +31,8 @@ function LectuerCourseContent() {
                         </p>    
                     </div>
                     <div className=' flex flex-col gap-0.5'>
-                        <p className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'>Enrolled Students: 4</p>
-                        <p className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'>Add Assignments</p>
-                        <p className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'>Create Test</p>
+                        <p className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'>Check Assignment</p>
+                        <p className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'>Check Tests</p>
                     </div>
                 </div>
             </div>
@@ -127,4 +122,4 @@ function LectuerCourseContent() {
   )
 }
 
-export default LectuerCourseContent
+export default StudentCourseContent

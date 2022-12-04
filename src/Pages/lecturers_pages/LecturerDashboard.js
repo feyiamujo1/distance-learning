@@ -1,11 +1,15 @@
 import React from 'react'
 import LecturerHeader from '../../Components/lecturers_components/LecturerHeader'
 import LecturerSidebar from '../../Components/lecturers_components/LecturerSidebar'
-import LecturerDashboard from './components/LecturerDashboard'
-import LecturerMainCourses from './components/LecturerMainCourses'
+import LecturerDashboard from './main_pages/LecturerMainDashboard'
+import LecturerMainCourses from './main_pages/LecturerMainCourses'
+import LecturerMainTests from './main_pages/LecturerMainTests'
+import LecturersMainAssignments from './main_pages/LecturersMainAssignments'
 import LectuerCourseContent from './LectuerCourseContent'
 import LecturerAddCourseContent from './LecturerAddCourseContent'
+import LecturerAssignmentContent from './LecturerAssignmentContent'
 import LecturerEnrolledStudents from './LecturerEnrolledStudents'
+import LecturerTestContent from './LecturerTestContent'
 
 function LecturerMainDashboard() {
   return (
@@ -18,7 +22,11 @@ function LecturerMainDashboard() {
           {/* <LecturerMainCourses /> */}
           {/* <LectuerCourseContent /> */}
           {/* <LecturerAddCourseContent /> */}
-          <LecturerEnrolledStudents />
+          {/* <LecturerEnrolledStudents /> */}
+          {/* <LecturersMainAssignments /> */}
+          {/* <LecturerAssignmentContent /> */}
+          <LecturerMainTests />
+          {/* <LecturerTestContent /> */}
         </div>
       </div>
     </div>

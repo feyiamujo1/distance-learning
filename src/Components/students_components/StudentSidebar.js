@@ -1,6 +1,7 @@
 import React from 'react'
 import {ImHome} from 'react-icons/im'
 import {MdMenuBook, MdNoteAlt, MdScore} from 'react-icons/md'
+import { MdAnnouncement } from 'react-icons/md'
 import {IoLogOut} from 'react-icons/io5'
 import SideBarLogo from '../../assets/images/alhikmah_logo.png'
 
@@ -27,6 +28,10 @@ function StudentSidebar() {
           <div className='px-4 py-1 rounded text-base font-medium text-white hover:bg-[#235335] flex flex-row gap-3 items-center cursor-pointer'>
             <MdScore className='text-xl'/>
             Tests
+          </div>
+          <div className='px-4 py-1 rounded text-base font-medium text-white hover:bg-[#235335] flex flex-row gap-3 items-center cursor-pointer'>
+            <MdAnnouncement  className='text-lg'/>
+            <p>Announcements</p>
           </div>
         </div>
       </div>

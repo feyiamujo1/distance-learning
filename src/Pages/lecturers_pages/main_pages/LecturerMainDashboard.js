@@ -6,7 +6,7 @@ import CourseBgImage from '../../../../src/assets/images/undraw_teacher_re_sico.
 function LecturerDashboard() {
   return (
     <div className='px-10 py-11 h-full'>
-        <div className='w-full p-6 bg-white rounded-md flex flex-col gap-4'>
+        <div className='min-h-screen w-full p-6 bg-white rounded-md flex flex-col gap-4'>
         <h1 className='text-lg font-bold text-custom-green-two'>My Latest Courses</h1>
         <div className='flex flex-wrap justify-around gap-2'>
             <div className='w-58 flex flex-col gap-4 p-6 pb-4 mb-5 box-border shadow-nav-shadow rounded-md group cursor-pointer hover:opacity-70 ease-in-out duration-500 hover:-translate-y-3.5'>
@@ -15,7 +15,7 @@ function LecturerDashboard() {
                 </div>
                 <div className='border-t-2 pt-2'>
                     <p className='text-sm font-medium text-right'>Introduction to Computer</p>
-                    <p className='text-xs font-medium text-right'>2022/2023</p>
+                    {/* <p className='text-xs font-medium text-right'>2022/2023</p> */}
                 </div>
                 <div className='flex justify-start'>
                     <p className=' py-1 text-sm font-bold text-custom-green-two rounded-md group-hover:text-custom-brown'>
@@ -29,7 +29,7 @@ function LecturerDashboard() {
                 </div>
                 <div className='border-t-2 pt-2'>
                     <p className='text-sm font-medium text-right'>Introduction to Computer</p>
-                    <p className='text-xs font-medium text-right'>2022/2023</p>
+                    {/* <p className='text-xs font-medium text-right'>2022/2023</p> */}
                 </div>
                 <div className='flex justify-start'>
                     <p className=' py-1 text-sm font-bold text-custom-green-two rounded-md group-hover:text-custom-brown'>
@@ -43,7 +43,7 @@ function LecturerDashboard() {
                 </div>
                 <div className='border-t-2 pt-2'>
                     <p className='text-sm font-medium text-right'>Introduction to Computer</p>
-                    <p className='text-xs font-medium text-right'>2022/2023</p>
+                    {/* <p className='text-xs font-medium text-right'>2022/2023</p> */}
                 </div>
                 <div className='flex justify-start'>
                     <p className=' py-1 text-sm font-bold text-custom-green-two rounded-md group-hover:text-custom-brown'>
@@ -57,7 +57,7 @@ function LecturerDashboard() {
                 </div>
                 <div className='border-t-2 pt-2'>
                     <p className='text-sm font-medium text-right'>Introduction to Computer</p>
-                    <p className='text-xs font-medium text-right'>2022/2023</p>
+                    {/* <p className='text-xs font-medium text-right'>2022/2023</p> */}
                 </div>
                 <div className='flex justify-start'>
                     <p className=' py-1 text-sm font-bold text-custom-green-two rounded-md group-hover:text-custom-brown'>

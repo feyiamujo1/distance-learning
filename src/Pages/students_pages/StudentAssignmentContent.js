@@ -5,10 +5,10 @@ import HllAudio from '../../../src/assets/audio/file_example_MP3_700KB.mp3'
 import { HiHome } from 'react-icons/hi2'
 import PdfImage from '../../../src/assets/images/pdf.png'
 
-function LecturerAssignmentContent() {
+function StudentAssignmentContent() {
   return (
     <div className='px-10 py-11 h-full'>
-        <div className='w-full p-6 bg-white rounded-md flex flex-col gap-6'>
+        <div className='w-full min-h-[50vh] p-6 bg-white rounded-md flex flex-col gap-6'>
             <div className='flex flex-col gap-2'>
                 <div className='flex flex-col gap-2'>
                     <div className='flex flex-row justify-between items-center'>
@@ -44,9 +44,13 @@ function LecturerAssignmentContent() {
                             Suspendisse ac turpis quis ligula euismod consectetur. Aenean sollicitudin risus pellentesque mi porttitor gravida. */}
                         </p> 
                     </div>
+                    <div className=' flex flex-col gap-2'>
+                        <p className='text-xs font-medium text-custom-brown'>Make Submissions here</p>
+                        <input type='file' className='w-fit cursor-pointer hover:text-custom-green-two'/>
+                    </div>
                 </div>
                 <div className=' flex flex-row justify-end mb-6'>
-                  <p className='text-sm py-3 px-5 font-medium bg-custom-green-two cursor-pointer hover:bg-custom-brown rounded-md text-white group-hover:text-custom-off-white'>View Submissions</p>
+                  <p className='text-sm py-3 px-5 font-medium bg-custom-green-two cursor-pointer hover:bg-custom-brown rounded-md text-white group-hover:text-custom-off-white'>Submit</p>
                 </div>
             </div>
             <div className='flex flex-col gap-10'>
@@ -66,8 +70,12 @@ function LecturerAssignmentContent() {
                             Suspendisse ac turpis quis ligula euismod consectetur. Aenean sollicitudin risus pellentesque mi porttitor gravida. */}
                         </p> 
                     </div>
+                    <div className=' flex flex-col gap-2'>
+                        <p className='text-xs font-medium text-custom-brown'>Make Submissions here</p>
+                        <input type='file' className='w-fit cursor-pointer hover:text-custom-green-two'/>
+                    </div>
                     <div className=' flex flex-row justify-end mb-6'>
-                      <p className='text-sm py-3 px-5 font-medium bg-custom-green-two cursor-pointer hover:bg-custom-brown rounded-md text-white group-hover:text-custom-off-white'>View Submissions</p>
+                      <p className='text-sm py-3 px-5 font-medium bg-custom-green-two cursor-pointer hover:bg-custom-brown rounded-md text-white group-hover:text-custom-off-white'>Submit</p>
                     </div>
                 </div>
             </div>
@@ -76,4 +84,4 @@ function LecturerAssignmentContent() {
   )
 }
 
-export default LecturerAssignmentContent
+export default StudentAssignmentContent

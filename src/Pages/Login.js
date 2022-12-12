@@ -16,7 +16,7 @@ function Login() {
     e.preventDefault()
     // sessionStorage.setItem('userDetails', JSON.stringify({userDetails}))
     console.log(userDetails)
-    // window.location = "/"
+    window.location = "/"
   }
 
   return (

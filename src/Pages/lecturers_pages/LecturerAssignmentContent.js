@@ -1,9 +1,10 @@
 import React from 'react'
-import Hll from '../../../src/assets/images/Hll.png'
-import HllVideo from '../../../src/assets/videos/Higher_level_and_lower_level_languages_Computer_Science_Wiki.mkv'
-import HllAudio from '../../../src/assets/audio/file_example_MP3_700KB.mp3'
+// import Hll from '../../../src/assets/images/Hll.png'
+// import HllVideo from '../../../src/assets/videos/Higher_level_and_lower_level_languages_Computer_Science_Wiki.mkv'
+// import HllAudio from '../../../src/assets/audio/file_example_MP3_700KB.mp3'
 import { HiHome } from 'react-icons/hi2'
-import PdfImage from '../../../src/assets/images/pdf.png'
+import { Link } from 'react-router-dom'
+// import PdfImage from '../../../src/assets/images/pdf.png'
 
 function LecturerAssignmentContent() {
   return (
@@ -13,12 +14,13 @@ function LecturerAssignmentContent() {
                 <div className='flex flex-col gap-2'>
                     <div className='flex flex-row justify-between items-center'>
                         <div className='flex flex-col'>
-                            <h1 className='text-3xl font-bold '>Assignment: Introduction to Programming</h1>
-                            <p className='text-sm text-black'>Session: 2022/2023</p>
+                            <h1 className='text-3xl font-bold '>Introduction to Programming</h1>
+                            <p className='text-sm text-black font-bold'>Course Code: CMP321</p>
+                            <p className='text-sm font-bold text-custom-green-two'>Assignments: 2</p>
                         </div>
                         <div className='py-3 px-5 flex flex-row bg-custom-green-two rounded-md items-center gap-2 cursor-pointer group hover:bg-custom-brown'>
-                          <HiHome className='text-base text-white'/>
                           <p className='text-base font-medium text-white group-hover:text-custom-off-white'>Course Home</p>
+                          <HiHome className='text-base text-white'/>
                         </div>
                     </div>
                     {/* <div className='flex flex-col items-end'>
@@ -45,9 +47,9 @@ function LecturerAssignmentContent() {
                         </p> 
                     </div>
                 </div>
-                <div className=' flex flex-row justify-end mb-6'>
+                <Link to='/lecturer/assignments/cmp321/submission' className=' flex flex-row justify-end mb-6'>
                   <p className='text-sm py-3 px-5 font-medium bg-custom-green-two cursor-pointer hover:bg-custom-brown rounded-md text-white group-hover:text-custom-off-white'>View Submissions</p>
-                </div>
+                </Link>
             </div>
             <div className='flex flex-col gap-10'>
                 <div className='flex flex-col gap-4'>
@@ -66,9 +68,9 @@ function LecturerAssignmentContent() {
                             Suspendisse ac turpis quis ligula euismod consectetur. Aenean sollicitudin risus pellentesque mi porttitor gravida. */}
                         </p> 
                     </div>
-                    <div className=' flex flex-row justify-end mb-6'>
-                      <p className='text-sm py-3 px-5 font-medium bg-custom-green-two cursor-pointer hover:bg-custom-brown rounded-md text-white group-hover:text-custom-off-white'>View Submissions</p>
-                    </div>
+                    <Link to='/lecturer/assignments/cmp321/submission' className=' flex flex-row justify-end mb-6'>
+                        <p className='text-sm py-3 px-5 font-medium bg-custom-green-two cursor-pointer hover:bg-custom-brown rounded-md text-white group-hover:text-custom-off-white'>View Submissions</p>
+                    </Link>
                 </div>
             </div>
         </div>

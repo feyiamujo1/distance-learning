@@ -4,6 +4,7 @@ import HllVideo from '../../../src/assets/videos/Higher_level_and_lower_level_la
 import HllAudio from '../../../src/assets/audio/file_example_MP3_700KB.mp3'
 import { BsPencilSquare } from 'react-icons/bs'
 import PdfImage from '../../../src/assets/images/pdf.png'
+import { Link } from 'react-router-dom'
 
 function LectuerCourseContent() {
   return (
@@ -14,12 +15,13 @@ function LectuerCourseContent() {
                     <div className='flex flex-row justify-between items-center'>
                         <div className='flex flex-col'>
                             <h1 className='text-3xl font-bold '>Introduction to Programming</h1>
-                            <p className='text-sm text-black'>Session: 2022/2023</p>
+                            <p className='text-sm text-black font-bold'>Course Code: CMP321</p>
+                            <p className='text-sm font-bold text-custom-green-two'>Lessons: 10</p>
                         </div>
-                        <div className='py-3 px-5 flex flex-row bg-custom-green-two rounded-md items-center gap-2 cursor-pointer group hover:bg-custom-brown'>
+                        <Link to='/lecturer/courses/cmp321/newlesson' className='py-3 px-5 flex flex-row bg-custom-green-two rounded-md items-center gap-2 cursor-pointer group hover:bg-custom-brown'>
                             <p className='text-base font-medium text-white group-hover:text-custom-off-white'>Add Lesson</p>
                             <BsPencilSquare className='text-base text-white'/>
-                        </div>
+                        </Link>
                     </div>
                 </div>
                 <div className='flex flex-row gap-2 box-border items-center justify-between '>
@@ -35,9 +37,9 @@ function LectuerCourseContent() {
                         </p>    
                     </div>
                     <div className=' flex flex-col gap-0.5'>
-                        <p className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'>Enrolled Students: 4</p>
-                        <p className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'>Add Assignments</p>
-                        <p className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'>Create Test</p>
+                        <Link to='/lecturer/courses/cmp321/enrolledstudents' className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'><p>Enrolled Students: 10</p></Link>
+                        <Link to='/lecturer/assignments/cmp321/newassignment' className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'><p>Add Assignments</p></Link>
+                        <Link to='/lecturer/tests/cmp321/newtest' className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'><p>Create Test</p></Link>
                     </div>
                 </div>
             </div>
@@ -77,7 +79,7 @@ function LectuerCourseContent() {
                             <audio controls width="250px">
                                 <source src={HllAudio} />
                             </audio>
-                            <div className='cursor-pointer flex flex-row justify-center items-center hover:text-red-700'><img className='w-10 h-10' src={PdfImage} />Click to download document</div> 
+                            <div className='cursor-pointer flex flex-row justify-center items-center hover:text-red-700'><img className='w-10 h-10' src={PdfImage} alt="" />Click to download document</div> 
                             
                             
                         </div>
@@ -117,7 +119,7 @@ function LectuerCourseContent() {
                             <audio controls width="250px">
                                 <source src={HllAudio} />
                             </audio>
-                            <div className='cursor-pointer flex flex-row justify-center items-center hover:text-red-700'><img className='w-10 h-10' src={PdfImage} />Click to download document</div> 
+                            <div className='cursor-pointer flex flex-row justify-center items-center hover:text-red-700'><img className='w-10 h-10' src={PdfImage} alt=""/>Click to download document</div> 
                         </div>
                     </div>
                 </div>

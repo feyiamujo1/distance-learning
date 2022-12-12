@@ -1,5 +1,5 @@
 import React from 'react'
-import { BsPeopleFill } from 'react-icons/bs'
+// import { BsPeopleFill } from 'react-icons/bs'
 import { MdScore } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 

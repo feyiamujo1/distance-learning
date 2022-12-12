@@ -14,7 +14,7 @@ function Login() {
 
   const submitHandler = (e) =>{
     e.preventDefault()
-    // sessionStorage.setItem('userDetails', JSON.stringify({userDetails}))
+    sessionStorage.setItem('userDetails', JSON.stringify({userDetails}))
     console.log(userDetails)
     window.location = "/"
   }

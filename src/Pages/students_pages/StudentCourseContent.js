@@ -13,8 +13,8 @@ function StudentCourseContent() {
                 <div className='flex flex-col gap-2'>
                     <div className='flex flex-row justify-between items-center'>
                         <div className='flex flex-col'>
-                            <h1 className='text-3xl font-bold '>Introduction to Programming</h1>
-                            <p className='text-sm text-black'>Session: 2022/2023</p>
+                            <h1 className='text-3xl font-bold '>Test 1: Introduction to Programming</h1>
+                            <p className='text-sm text-black'>CMP 321</p>
                         </div>
                     </div>
                 </div>
@@ -31,7 +31,7 @@ function StudentCourseContent() {
                         </p>    
                     </div>
                     <div className=' flex flex-col gap-0.5'>
-                        <p className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'>Check Assignment</p>
+                        <p className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'>Check Assignments</p>
                         <p className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'>Check Tests</p>
                     </div>
                 </div>
@@ -72,7 +72,7 @@ function StudentCourseContent() {
                             <audio controls width="250px">
                                 <source src={HllAudio} />
                             </audio>
-                            <div className='cursor-pointer flex flex-row justify-center items-center hover:text-red-700'><img className='w-10 h-10' src={PdfImage} />Click to download document</div> 
+                            <div className='cursor-pointer flex flex-row justify-center items-center hover:text-red-700'><img className='w-10 h-10' src={PdfImage} alt=""/>Click to download document</div> 
                             
                             
                         </div>
@@ -112,7 +112,7 @@ function StudentCourseContent() {
                             <audio controls width="250px">
                                 <source src={HllAudio} />
                             </audio>
-                            <div className='cursor-pointer flex flex-row justify-center items-center hover:text-red-700'><img className='w-10 h-10' src={PdfImage} />Click to download document</div> 
+                            <div className='cursor-pointer flex flex-row justify-center items-center hover:text-red-700'><img className='w-10 h-10' src={PdfImage} alt=""/>Click to download document</div> 
                         </div>
                     </div>
                 </div>

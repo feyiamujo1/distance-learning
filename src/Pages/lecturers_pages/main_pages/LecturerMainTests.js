@@ -22,7 +22,7 @@ function LecturerMainTests() {
                         </div>
                     </div>
                     <div className='flex justify-start'>
-                        <p className=' py-1 text-sm font-bold group-hover:text-custom-green-two rounded-md group-hover:text-custom-brown'>
+                        <p className=' py-1 text-sm font-bold rounded-md group-hover:text-custom-brown'>
                             View
                         </p>
                     </div>
@@ -38,7 +38,7 @@ function LecturerMainTests() {
                         </div>
                     </div>
                     <div className='flex justify-start'>
-                        <p className=' py-1 text-sm font-bold group-hover:text-custom-green-two rounded-md group-hover:text-custom-brown'>
+                        <p className=' py-1 text-sm font-bold rounded-md group-hover:text-custom-brown'>
                             View
                         </p>
                     </div>
@@ -54,7 +54,7 @@ function LecturerMainTests() {
                         </div>
                     </div>
                     <div className='flex justify-start'>
-                        <p className=' py-1 text-sm font-bold group-hover:text-custom-green-two rounded-md group-hover:text-custom-brown'>
+                        <p className=' py-1 text-sm font-bold rounded-md group-hover:text-custom-brown'>
                             View
                         </p>
                     </div>
@@ -70,7 +70,7 @@ function LecturerMainTests() {
                         </div>
                     </div>
                     <div className='flex justify-start'>
-                        <p className=' py-1 text-sm font-bold group-hover:text-custom-green-two rounded-md group-hover:text-custom-brown'>
+                        <p className=' py-1 text-sm font-bold rounded-md group-hover:text-custom-brown'>
                             View
                         </p>
                     </div>

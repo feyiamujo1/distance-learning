@@ -12,10 +12,6 @@ function LecturerHeader() {
               <p className='font-medium text-custom-green-two group-hover:text-custom-brown'>Hi, Feyisayo</p>
               <HiUserCircle className='text-[#034a23] text-5xl group-hover:text-custom-brown'/>
             </Link>
-            {/* <div className='absolute hidden group-hover:block bg-white w-full shadow-md top-10 right-10 p-4'>
-              <p className='border-b'>Amujoyegbe Feyisayo</p>
-              <p  className='border-b'>HUI/SSE/PF/001</p>
-            </div> */}
           </div>
         </div>
     </div>

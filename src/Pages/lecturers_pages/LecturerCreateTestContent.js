@@ -22,7 +22,7 @@ function LecturerCreateTestContent() {
     <div className='px-10 py-11 h-full'>
         <div className='w-full min-h-screen p-6 bg-white rounded-md flex flex-col gap-10'>
             <div>
-                <h1 className='text-xl font-bold mb-2'>Create Test Questions for Introduction to Programming</h1>
+                <h1 className='text-xl font-bold mb-2'>Test 1: Introduction to Programming</h1>
                 <form onSubmit={displayQuestionInput} className='flex flex-col gap-2'>
                     <label>Confirm the number of question before starting</label> 
                     <div>
@@ -57,13 +57,9 @@ function LecturerCreateTestContent() {
                                 <input className='p-3 rounded-md text-base outline-none border-2 hover:border-custom-green-two' type='text' id={`Question[${i+1}][3]`} name={`Question[${i+1}][3]`} value={testQuestion[`Question[${i+1}][3]`]} onChange={handleChange} required />
                             </div>    
                             <div className='flex flex-col gap-2.5'>
-                                <label className='text-base font-medium' for="Question_four">Option 4</label>
-                                <input className='p-3 rounded-md text-base outline-none border-2 hover:border-custom-green-two' type='text' id={`Question[${i+1}][4]`} name={`Question[${i+1}][4]`} value={testQuestion[`Question[${i+1}][4]`]} onChange={handleChange} required />
+                                <label className='text-base font-medium' for="Question_four">Answer</label>
+                                <input className='p-3 rounded-md text-base outline-none border-2 hover:border-custom-green-two' type='text' id={`Answer[${i+1}][4]`} name={`Question[${i+1}][4]`} value={testQuestion[`Question[${i+1}][4]`]} onChange={handleChange} required />
                             </div>  
-                            <div className='flex flex-col gap-2.5'>
-                                <label className='text-base font-medium' for="correct_answer_one">Correct Answer from the four options</label>
-                                <input className='p-3 rounded-md text-base outline-none border-2 hover:border-custom-green-two' type='text' id={`Question[${i+1}][c]`} name={`Question[${i+1}][c]`} value={testQuestion[`Question[${i+1}][c]`]} onChange={handleChange} required />
-                            </div> 
                         </div>
                     </div>    
                 ))}

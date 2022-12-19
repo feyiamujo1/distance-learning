@@ -10,6 +10,8 @@ import StudentMainCourse from './student_main_pages/StudentMainCourse'
 import StudentDashboard from './student_main_pages/StudentMainDashboard'
 import StudentMainTests from './student_main_pages/StudentMainTests'
 import StudentTestContent from './StudentTestContent'
+import { Navigate, Route, Routes } from 'react-router-dom'
+import UserInfoPage from '../UserInfoPage'
 // import LecturerCreateTestContent from '../lecturers_pages/LecturerCreateTestContent'
 
 function MainStudentDashboard() {
@@ -19,14 +21,18 @@ function MainStudentDashboard() {
       <div className='flex flex-col grow ml-60'>
         <StudentHeader />
         <div className=''>
-          <StudentDashboard />
-          <StudentMainCourse />
-          <StudentCourseContent />
-          <StudentMainAnnouncement />
-          <StudentMainAssignment />
-          <StudentAssignmentContent />
-          <StudentTestContent />
-          <StudentMainTests />
+          <Routes>
+            <Route path="/" element={<Navigate to="/student/dashboard"/>}/>
+            <Route path='/student/dashboard' element={<StudentDashboard />} />
+            <Route path='/student/courses' element={<StudentMainCourse />} />
+            <Route path='/student/courses/cmp321' element={<StudentCourseContent />} />
+            <Route path='/student/announcements' element={<StudentMainAnnouncement />} />
+            <Route path='/student/assignments' element={<StudentMainAssignment />} />
+            <Route path='/student/assignments/cmp321' element={<StudentAssignmentContent />} />
+            <Route path='/student/tests' element={<StudentMainTests />} />
+            <Route path='/student/tests/cmp321' element={<StudentTestContent />} />
+            <Route path='/student/details' element={<UserInfoPage />} />
+          </Routes>
         </div>
       </div>
     </div>

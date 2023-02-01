@@ -31,10 +31,10 @@ function LecturerMainCourses() {
                 <h1 className='text-lg font-bold text-custom-green-two'>My Courses</h1>
                 <p className='font-bold text-custom-green-two'>Total: {lecturerDetails?.courses?.length}</p>
             </div>
-            <div className='flex flex-wrap justify-around gap-2'>
+            <div className='flex flex-wrap justify-around gap-2 min-h-screen'>
                 {
                     lecturerDetails.courses ? lecturerDetails.courses.map((course, id) => (
-                        <Link to={'/lecturer/courses/'+course.id} className='w-[230px] flex flex-col justify-between gap-4 py-6 px-5 pb-4 mb-5 box-border shadow-nav-shadow rounded-md group cursor-pointer hover:bg-custom-off-white ease-in-out duration-500 hover:-translate-y-3.5'>
+                        <Link key={id} to={'/lecturer/courses/'+course.id} className='w-[230px] flex flex-col justify-between gap-4 py-6 px-5 pb-4 mb-5 box-border shadow-nav-shadow rounded-md group cursor-pointer hover:bg-custom-off-white ease-in-out duration-500 hover:-translate-y-3.5'>
                             <div className='flex flex-col justify-between gap-4'>
                                 <div className='w-full rounded-md pb-2'>
                                     <img className='w-full h-44 rounded-md' src={CourseBgImage} alt='coursebg'/>

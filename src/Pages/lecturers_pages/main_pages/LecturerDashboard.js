@@ -11,7 +11,7 @@ function LecturerDashboard() {
     const lecturer_id = auth.user_id;
     const [lecturerDetails, setLecturerDetails] = useState({});
 
-    // Fetch All Student Details
+    // Fetch All Lecturer Details
     useEffect(() => {
         try {
             axios.get(baseUrl+"/teachers/"+lecturer_id+"/")

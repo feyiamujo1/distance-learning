@@ -1,6 +1,26 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import axios from 'axios'
+const baseUrl = 'http://localhost:8000'
 
 function LecturerAddCourseContent() {
+    let {course_id} = useParams();
+    const [courseDetails, setCourseDetails] = useState({});
+
+    // Fetch Course Content
+    useEffect(() => {
+        try {
+            axios.get(baseUrl+"/classes/"+course_id+"/")
+            .then((response) => {
+                setCourseDetails(response.data)
+            });
+        } catch (error) {
+            console.log(error)
+        }
+        
+    }, [course_id]);
+    console.log(courseDetails);
+    
     const [newCourseTextContent, setNewCourseTextContent] = useState({course_title:'', course_description:''});
     const [newCourseResource, setNewCourseResource] = useState();
     
@@ -22,7 +42,7 @@ function LecturerAddCourseContent() {
   return (
     <div className='px-10 py-11 h-full'>
         <div className='w-full p-6 bg-white rounded-md flex flex-col gap-6'>
-            <h1 className='text-xl font-bold '>Lesson 3 for Introduction to Programming</h1>
+            <h1 className='text-xl font-bold '>Lesson 3 for {courseDetails?.name}</h1>
             <form onSubmit={submitHandler} className='flex flex-col gap-4'>
                 <div className='flex flex-col gap-2.5'>
                     <label className='text-base font-medium' for="course_title">Lesson Title</label>

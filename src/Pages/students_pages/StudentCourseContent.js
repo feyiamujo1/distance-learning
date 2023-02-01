@@ -1,12 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Hll from '../../../src/assets/images/Hll.png'
 import HllVideo from '../../../src/assets/videos/Higher_level_and_lower_level_languages_Computer_Science_Wiki.mkv'
 import HllAudio from '../../../src/assets/audio/file_example_MP3_700KB.mp3'
 // import { BsPencilSquare } from 'react-icons/bs'
 import PdfImage from '../../../src/assets/images/pdf.png'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import axios from 'axios'
+const baseUrl = 'http://localhost:8000'
 
 function StudentCourseContent() {
+    let {course_id} = useParams();
+    const [courseDetails, setCourseDetails] = useState({});
+    useEffect(() => {
+        try {
+            axios.get(baseUrl+"/classes/"+course_id+"/")
+            .then((response) => {
+                setCourseDetails(response.data)
+            });
+        } catch (error) {
+            console.log(error)
+        }
+        
+    }, [course_id]);
+    console.log(courseDetails);
+
   return (
     <div className='px-10 py-11 h-full'>
         <div className='w-full p-6 bg-white rounded-md flex flex-col gap-6'>
@@ -14,9 +31,9 @@ function StudentCourseContent() {
                 <div className='flex flex-col gap-2'>
                     <div className='flex flex-row justify-between items-center'>
                         <div className='flex flex-col'>
-                            <h1 className='text-3xl font-bold '>Introduction to Programming</h1>
-                            <p className='text-sm text-black font-bold'>Course Code: CMP321</p>
-                            <p className='text-sm font-bold text-custom-green-two'>Lessons: 10</p>
+                            <h1 className='text-3xl font-bold '>{courseDetails?.name}</h1>
+                            <p className='text-sm text-black font-bold'>Course Code: {courseDetails?.session}</p>
+                            <p className='text-sm font-bold text-custom-green-two'>Lessons: 2</p>
                         </div>
                     </div>
                 </div>
@@ -26,15 +43,12 @@ function StudentCourseContent() {
                             Description
                         </p>
                         <p className='text-black text-sm'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin hendrerit posuere elementum. Fusce et ligula id libero pretium blandit. 
-                            Proin ullamcorper aliquam massa sit amet bibendum. Nullam vitae mauris id velit venenatis vulputate quis non purus. {/*Nullam blandit 
-                            mattis posuere. Etiam suscipit, massa quis elementum pulvinar, mauris orci tincidunt ipsum, sit amet volutpat massa diam vel lacus. 
-                            Suspendisse ac turpis quis ligula euismod consectetur. Aenean sollicitudin risus pellentesque mi porttitor gravida. */}
+                            {courseDetails?.description}
                         </p>    
                     </div>
                     <div className=' flex flex-col gap-0.5'>
-                        <Link to='/student/assignments/cmp321' className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'>Check Assignments</Link>
-                        <Link to='/student/tests/cmp321' className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'>Check Tests</Link>
+                        <Link to={'/student/assignments/'+course_id+''} className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'>Check Assignments</Link>
+                        <Link to={'/student/tests/'+course_id+''} className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'>Check Tests</Link>
                     </div>
                 </div>
             </div>

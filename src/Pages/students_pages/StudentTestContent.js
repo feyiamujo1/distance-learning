@@ -10,7 +10,7 @@ function StudentTestContent() {
                 <div className='flex flex-col gap-2'>
                     <div className='flex flex-row justify-between items-center'>
                         <div className='flex flex-col'>
-                            <h1 className='text-3xl font-bold '>Introduction to Programming</h1>
+                            <h1 className='text-3xl font-bold '>Test: Machine Learning</h1>
                             {/* <p className='text-sm text-black'>Session: 2022/2023</p> */}
                             <p className='text-sm text-black font-bold'>Test: CMP321</p>
                             <p className='text-sm font-bold text-custom-green-two mb-4'>Questions: 20</p>
@@ -52,7 +52,7 @@ function StudentTestContent() {
                             </div>
                         </div>
                         <div className='flex flex-col items-end w-full'>
-                            <button className='px-4 py-2 bg-custom-green-two text-white font-medium rounded-md w-fit hover:bg-custom-brown hover:text-custom-off-white'>Submit</button>
+                            {/* <button className='px-4 py-2 bg-custom-green-two text-white font-medium rounded-md w-fit hover:bg-custom-brown hover:text-custom-off-white'>Submit</button> */}
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@ function StudentTestContent() {
                             </div>
                         </div>
                         <div className='flex flex-col items-end w-full'>
-                            <button className='px-4 py-2 bg-custom-green-two text-white font-medium rounded-md w-fit hover:bg-custom-brown hover:text-custom-off-white'>Submit</button>
+                            {/* <button className='px-4 py-2 bg-custom-green-two text-white font-medium rounded-md w-fit hover:bg-custom-brown hover:text-custom-off-white'>Submit</button> */}
                         </div>
                     </div>
                 </div>

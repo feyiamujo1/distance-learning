@@ -4,7 +4,7 @@ import axios from 'axios'
 function LecturerAssignmentSubmission() {
     const [assignmentSubmissionList, setAssignmentSubmissionList] = useState();
     const [statusNote, setStatusNote] = useState("")
-    const url = 'https://fakerapi.it/api/v1/persons?_quantity=10' 
+    const url = 'https://fakerapi.it/api/v1/persons?_quantity=5' 
 
     useEffect(() => {
         axios.get(url)
@@ -22,9 +22,9 @@ function LecturerAssignmentSubmission() {
     <div className='px-10 py-11 h-full'>
         <div className='w-full p-6 min-h-screen bg-white rounded-md flex flex-col gap-6'>
             <div className='flex flex-col'>
-                <h1 className='text-3xl font-bold '>Introduction to Programming</h1>
-                <p className='text-sm text-black font-bold'>Course Code: CMP321</p>
-                <p className='text-sm font-bold text-custom-green-two'>Total Assignment Submission: 10</p>
+                <h1 className='text-3xl font-bold '>Artificial Intelligence</h1>
+                <p className='text-sm text-black font-bold'>Course Code: CMP445</p>
+                <p className='text-sm font-bold text-custom-green-two'>Total Assignment Submission: 1</p>
             </div>
             <div>
                 <p className=''>
@@ -39,18 +39,31 @@ function LecturerAssignmentSubmission() {
                             {/* <th className=''>Email</th> */}
                             <th>Submission</th>
                         </tr>
-                        {
+                        
+                        {/* {
                             assignmentSubmissionList ? assignmentSubmissionList.map((student, index) =>
                             <tr className='w-full flex flex-row text-left gap-6 items-center'>
                                 <td className='w-6 text-center'>{index + 1}</td>
-                                <td className='w-44'>{/*<img className='w-14 h-14 rounded-full' src={student.image} alt="team"/>*/}<span>{student.firstname + " " + student.lastname}</span></td> 
-                                <td className='w-36'>22/03CMP001</td>
+                                <td className='w-44'><span>{student.firstname + " " + student.lastname}</span></td> 
+                                <td className='w-36'>22/03CMP0{student.id+10}</td>
                                 <td className='text-custom-green-two underline cursor-pointer hover:text-custom-brown'>Click to Download</td>                
 
                             </tr>
                         )
                             : null
-                        }
+                        } */}
+                        <tr className='w-full flex flex-row text-left gap-6 items-center'>
+                            <td className='w-6 text-center'>{1}</td>
+                            <td className='w-44'>{/*<img className='w-14 h-14 rounded-full' src={student.image} alt="team"/>*/}<span>Odunsi Joseph</span></td> 
+                            <td className='w-36'>22/03CMP010</td>
+                            <td className='text-custom-green-two underline cursor-pointer hover:text-custom-brown'>Click to Download</td>                
+                        </tr>
+                        <tr className='w-full flex flex-row text-left gap-6 items-center'>
+                            <td className='w-6 text-center'>{2}</td>
+                            <td className='w-44'>{/*<img className='w-14 h-14 rounded-full' src={student.image} alt="team"/>*/}<span>Taslim Owolarafe</span></td> 
+                            <td className='w-36'>22/03CMP001</td>
+                            <td className='text-custom-green-two underline cursor-pointer hover:text-custom-brown'>Click to Download</td>                
+                        </tr>
                     </table>
                 </div>
             </div>

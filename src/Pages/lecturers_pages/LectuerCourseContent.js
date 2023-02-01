@@ -23,21 +23,21 @@ function LectuerCourseContent() {
             console.log(error)
         }
         
-    }, [])
+    }, [course_id]);
     console.log(courseDetails);
 
   return (
     <div className='px-10 py-11 h-full'>
         <div className='w-full p-6 bg-white rounded-md flex flex-col gap-6'>
-            <div className='flex flex-col gap-2'>
-                <div className='flex flex-col gap-2'>
+            <div className='flex flex-col'>
+                <div className='flex flex-col'>
                     <div className='flex flex-row justify-between items-center'>
-                        <div className='flex flex-col'>
+                        <div className='flex flex-col gap-2'>
                             <h1 className='text-3xl font-bold '>{courseDetails?.name}</h1>
                             <p className='text-sm text-black font-bold'>Course Code: {courseDetails?.session}</p>
-                            <p className='text-sm font-bold text-custom-green-two'>Lessons: 10</p>
+                            <p className='text-sm font-bold text-custom-green-two'>Lessons: 2</p>
                         </div>
-                        <Link to='/lecturer/courses/cmp321/newlesson' className='py-3 px-5 flex flex-row bg-custom-green-two rounded-md items-center gap-2 cursor-pointer group hover:bg-custom-brown'>
+                        <Link to={'/lecturer/courses/'+[course_id]+'/newlesson'} className='py-3 px-5 flex flex-row bg-custom-green-two rounded-md items-center gap-2 cursor-pointer group hover:bg-custom-brown'>
                             <p className='text-base font-medium text-white group-hover:text-custom-off-white'>Add Lesson</p>
                             <BsPencilSquare className='text-base text-white'/>
                         </Link>
@@ -53,9 +53,9 @@ function LectuerCourseContent() {
                         </p>    
                     </div>
                     <div className=' flex flex-col gap-0.5'>
-                        <Link to='/lecturer/courses/cmp321/enrolledstudents' className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'><p>Enrolled Students: {courseDetails?.students?.length}</p></Link>
-                        <Link to='/lecturer/assignments/cmp321/newassignment' className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'><p>Add Assignments</p></Link>
-                        <Link to='/lecturer/tests/cmp321/newtest' className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'><p>Create Test</p></Link>
+                        <Link to={'/lecturer/courses/'+course_id+'/enrolledstudents'} className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'><p>Enrolled Students: {courseDetails?.students?.length}</p></Link>
+                        <Link to={'/lecturer/courses/'+course_id+'/newassignment'} className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'><p>Add Assignments</p></Link>
+                        <Link to={'/lecturer/courses/'+course_id+'/newtest'} className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'><p>Create Test</p></Link>
                     </div>
                 </div>
             </div>

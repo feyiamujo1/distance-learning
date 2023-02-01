@@ -4,13 +4,13 @@ import {BiLock} from 'react-icons/bi'
 import Navbar from '../Components/Navbar';
 import axios from 'axios';
 import useAuth from '../hooks/UseAuth';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const { setAuth } = useAuth();
   const navigate = useNavigate();
-  const location = useLocation();
-  const from = location.state?.from?.pathname || "/";
+  // const location = useLocation();
+  // const from = location.state?.from?.pathname || "/";
   const [userDetails, setUserDetails] = useState("");
   const [err, setErr] = useState(false);
   const [errorMessage, setErrorMessage] = useState("Enter your login credentials");

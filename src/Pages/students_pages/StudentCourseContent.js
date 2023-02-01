@@ -4,6 +4,7 @@ import HllVideo from '../../../src/assets/videos/Higher_level_and_lower_level_la
 import HllAudio from '../../../src/assets/audio/file_example_MP3_700KB.mp3'
 // import { BsPencilSquare } from 'react-icons/bs'
 import PdfImage from '../../../src/assets/images/pdf.png'
+import { Link } from 'react-router-dom'
 
 function StudentCourseContent() {
   return (
@@ -13,8 +14,9 @@ function StudentCourseContent() {
                 <div className='flex flex-col gap-2'>
                     <div className='flex flex-row justify-between items-center'>
                         <div className='flex flex-col'>
-                            <h1 className='text-3xl font-bold '>Test 1: Introduction to Programming</h1>
-                            <p className='text-sm text-black'>CMP 321</p>
+                            <h1 className='text-3xl font-bold '>Introduction to Programming</h1>
+                            <p className='text-sm text-black font-bold'>Course Code: CMP321</p>
+                            <p className='text-sm font-bold text-custom-green-two'>Lessons: 10</p>
                         </div>
                     </div>
                 </div>
@@ -31,8 +33,8 @@ function StudentCourseContent() {
                         </p>    
                     </div>
                     <div className=' flex flex-col gap-0.5'>
-                        <p className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'>Check Assignments</p>
-                        <p className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'>Check Tests</p>
+                        <Link to='/student/assignments/cmp321' className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'>Check Assignments</Link>
+                        <Link to='/student/tests/cmp321' className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'>Check Tests</Link>
                     </div>
                 </div>
             </div>

@@ -2,7 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import CourseBgImage from '../../../../src/assets/images/undraw_teacher_re_sico.svg'
 
+
 function StudentMainCourse() {
+    
   return (
     <div className='px-10 py-11 h-full'>
         <div className='min-h-screen w-full p-6 bg-white rounded-md flex flex-col gap-4'>

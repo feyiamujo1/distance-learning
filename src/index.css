@@ -13,6 +13,26 @@ body {
 }
 
 /* Css for autofill background issshh */
+#username-webkit-autofill, #password-webkit-autofill,
+#username-webkit-autofill:hover, #password-webkit-autofill:hover,
+#username-webkit-autofill:focus, #password-webkit-autofill:focus{
+  transition: background-color 5000s;
+  -webkit-text-fill-color: #111820 !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-family: poppins;
+  font-size: inherit;
+  cursor: white;
+  
+}
+.input {
+  -webkit-background-clip: text !important;
+  background-clip:  text !important;
+}
+input, input:focus,input:hover, input:active{
+  box-shadow: 0 0 0 rgb(255, 255, 255) !important;
+}
+
 
 input:-webkit-autofill, 
 input:-webkit-autofill:hover,

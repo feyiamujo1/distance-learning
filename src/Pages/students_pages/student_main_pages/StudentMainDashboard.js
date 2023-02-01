@@ -1,8 +1,12 @@
-import React from 'react'
+import axios from 'axios';
+import React , { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import CourseBgImage from '../../../../src/assets/images/undraw_teacher_re_sico.svg'
 
+
 function StudentDashboard() {
+    
+
   return (
     <div className='px-10 py-11 h-full flex flex-col gap-10'>
         <div className='min-h-[50vh] w-full p-6 bg-white rounded-md shadow-sm flex flex-col gap-4 justify-between'>

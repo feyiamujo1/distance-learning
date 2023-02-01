@@ -3,7 +3,7 @@ import {ImHome} from 'react-icons/im'
 import {MdMenuBook, MdNoteAlt, MdScore} from 'react-icons/md'
 import { MdAnnouncement } from 'react-icons/md'
 import {IoLogOut} from 'react-icons/io5'
-import SideBarLogo from '../../assets/images/alhikmah_logo.png'
+import SideBarLogo from '../../../src/assets/images/alhikmah_logo.png'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 
 function StudentSidebar() {

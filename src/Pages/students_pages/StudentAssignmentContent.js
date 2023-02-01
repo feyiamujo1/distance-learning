@@ -1,9 +1,5 @@
 import React from 'react'
-import Hll from '../../../src/assets/images/Hll.png'
-import HllVideo from '../../../src/assets/videos/Higher_level_and_lower_level_languages_Computer_Science_Wiki.mkv'
-import HllAudio from '../../../src/assets/audio/file_example_MP3_700KB.mp3'
 import { HiHome } from 'react-icons/hi2'
-import PdfImage from '../../../src/assets/images/pdf.png'
 
 function StudentAssignmentContent() {
   return (

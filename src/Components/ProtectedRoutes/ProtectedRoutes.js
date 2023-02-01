@@ -1,16 +1,12 @@
 import React from 'react'
-import { Navigate, Outlet } from 'react-router-dom'
-
-const userAuth = () => {
-    let userDetails = JSON.parse(sessionStorage.getItem("userDetails"))
-    return userDetails
-}
+import { Navigate, Outlet, useLocation } from 'react-router-dom'
+import useAuth from '../../hooks/UseAuth'
 
 const ProtectedRoutes = () => {
-
-    const isAuth = userAuth()
-
-  return  isAuth ? <Outlet /> : <Navigate to="/login" />
+  const location = useLocation();
+  const { auth } = useAuth();
+  
+  return  auth?.token ? <Outlet /> : <Navigate to="/login" state={{ from: location }} replace/>
 }
 
 export default ProtectedRoutes

@@ -12,7 +12,8 @@ function StudentTestContent() {
                         <div className='flex flex-col'>
                             <h1 className='text-3xl font-bold '>Introduction to Programming</h1>
                             {/* <p className='text-sm text-black'>Session: 2022/2023</p> */}
-                            <p className='text-sm text-black'><span className='font-bold'>Questions:</span> 20</p>
+                            <p className='text-sm text-black font-bold'>Test: CMP321</p>
+                            <p className='text-sm font-bold text-custom-green-two mb-4'>Questions: 20</p>
                             <p className='text-custom-brown text-sm'>Instructions: <br/>
                                 1. Please select on one option <br/>2. Ensure to click on submit after you select your answer 
                                 <br/>3. Once you submit your answer it can't be undone                          

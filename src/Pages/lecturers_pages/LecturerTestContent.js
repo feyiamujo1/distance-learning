@@ -1,10 +1,44 @@
-import React from 'react'
+// import axios from 'axios';
+// import React, { useEffect, useState } from 'react'
 // import { BsPeopleFill } from 'react-icons/bs'
 import { MdScore } from 'react-icons/md'
 import { Link } from 'react-router-dom'
-
+// import useAuth from '../../hooks/UseAuth';
+// const baseUrl = 'http://localhost:8000'
 
 function LecturerTestContent() {
+    // const { auth } = useAuth();
+    // // const token = auth.token;
+    // let {course_id} = useParams();
+    // const [courseDetails, setCourseDetails] = useState({});
+    
+
+    // // Fetch Course Content
+    // useEffect(() => {
+    //     try {
+    //         axios.get(baseUrl+"/classes/"+course_id+"/")
+    //         .then((response) => {
+    //             setCourseDetails(response.data)
+    //         });
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+        
+    // }, [course_id]);
+
+    // // Get Test ID
+    // useEffect(() => {
+    //     try {
+    //         axios.post(baseUrl+"/quizzes/create/")
+    //         .then((response) => {
+    //             setCourseDetails(response.data)
+    //         });
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+        
+    // }, [course_id]);
+
   return (
     <div className='px-10 py-11 h-full'>
         <div className='w-full p-6 bg-white rounded-md flex flex-col gap-6'>

@@ -5,7 +5,7 @@ import LecturerDashboard from './main_pages/LecturerDashboard'
 import LecturerMainCourses from './main_pages/LecturerMainCourses'
 import LecturerMainTests from './main_pages/LecturerMainTests'
 import LecturersMainAssignments from './main_pages/LecturersMainAssignments'
-import LectuerCourseContent from './LectuerCourseContent'
+import LectuerCourseContent from './LecturerCourseContent'
 import LecturerAddCourseContent from './LecturerAddCourseContent'
 import LecturerAssignmentContent from './LecturerAssignmentContent'
 // import LecturerEnrolledStudents from './LecturerEnrolledStudents'
@@ -24,7 +24,7 @@ const baseUrl = 'http://localhost:8000'
 function MainLecturerDashboard() {
   const { auth } = useAuth();
   const lecturer_id = auth.user_id;
-  const token = auth.token
+  const token = auth.token;
   // const config = {
   //   headers: {Authorization: `Bearer ${token}`}
   // }
@@ -42,7 +42,7 @@ function MainLecturerDashboard() {
           console.log(error)
       }
     
-  }, [])
+  }, [lecturer_id])
     
     console.log(lecturerDetails);
   const lecturer_firstname = lecturerDetails.firstname;
@@ -58,15 +58,15 @@ function MainLecturerDashboard() {
             <Route path='/lecturer/dashboard' element={<LecturerDashboard/>} />
             <Route path='/lecturer/courses' element={<LecturerMainCourses />} />
             <Route path='/lecturer/courses/:course_id' element={<LectuerCourseContent /> }/>
-            <Route path='/lecturer/courses/:course_id/newlesson' element={<LecturerAddCourseContent /> }/>
-            <Route path='/lecturer/courses/:course_id/enrolledstudents' element={<EnrolledCourseStudents />} />
+            <Route path='/lecturer/courses/:course_id/new-lesson' element={<LecturerAddCourseContent /> }/>
+            <Route path='/lecturer/courses/:course_id/enrolled-students' element={<EnrolledCourseStudents />} />
             <Route path='/lecturer/assignments' element={<LecturersMainAssignments />} />
             <Route path='/lecturer/assignments/:course_id' element={<LecturerAssignmentContent />} />
-            <Route path='/lecturer/assignments/:course_id/newassignment' element={<LecturerAddAssignmentContent />}/>
+            <Route path='/lecturer/assignments/:course_id/new-assignment' element={<LecturerAddAssignmentContent />}/>
             <Route path='/lecturer/assignments/:course_id/submission' element={<LecturerAssignmentSubmission />}/>
             <Route path='/lecturer/tests' element={<LecturerMainTests />} />
             <Route path='/lecturer/tests/:course_id' element={<LecturerTestContent />} />
-            <Route path='/lecturer/tests/:course_id/newtest' element={<LecturerCreateTestContent />} />
+            <Route path='/lecturer/tests/:course_id/new-test' element={<LecturerCreateTestContent />} />
             <Route path='/lecturer/tests/:course_id/scores' element={<LecturerTestResult />}/>
             <Route path='/lecturer/details' element={<UserInfoPage />} />
           </Routes>

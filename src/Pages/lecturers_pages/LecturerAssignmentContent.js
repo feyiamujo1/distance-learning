@@ -75,9 +75,11 @@ function LecturerAssignmentContent() {
                                 </p> 
                             </div>
                         </div>
-                        <Link to={'/lecturer/assignments/courseid/submission'} className=' flex flex-row justify-end mb-6'>
-                        <p className='text-sm py-3 px-5 font-medium bg-custom-green-two cursor-pointer hover:bg-custom-brown rounded-md text-white group-hover:text-custom-off-white'>View Submissions</p>
-                        </Link>
+                        <div className='flex flex-row justify-end'>
+                            <Link to={'/lecturer/assignments/courseid/submission'} className='  w-fit mb-6'>
+                            <p className='text-sm py-3 px-5 font-medium bg-custom-green-two cursor-pointer hover:bg-custom-brown rounded-md text-white group-hover:text-custom-off-white'>View Submissions</p>
+                            </Link>
+                        </div>
                 </div>
             </div>
             {/* {

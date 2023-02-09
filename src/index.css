@@ -49,3 +49,13 @@ textarea:-webkit-autofill:focus{
   cursor: white;
   
 }
+
+/* #email, #password {
+  -webkit-background-clip: text !important;
+  background-clip:  text !important;
+}
+.test_input, .test_input:focus, .test_input:hover, .test_input:active{
+  box-shadow: 0 0 0 rgb(255, 255, 255) !important;
+  background-clip:  text !important;
+  color: black;
+}  */

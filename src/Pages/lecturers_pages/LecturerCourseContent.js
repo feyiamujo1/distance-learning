@@ -8,7 +8,7 @@ import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 const baseUrl = 'http://localhost:8000'
 
-function LectuerCourseContent() {
+function LecturerCourseContent() {
     let {course_id} = useParams();
     const [courseDetails, setCourseDetails] = useState({});
 
@@ -37,7 +37,7 @@ function LectuerCourseContent() {
                             <p className='text-sm text-black font-bold'>Course Code: {courseDetails?.session}</p>
                             <p className='text-sm font-bold text-custom-green-two'>Lessons: 2</p>
                         </div>
-                        <Link to={'/lecturer/courses/'+[course_id]+'/newlesson'} className='py-3 px-5 flex flex-row bg-custom-green-two rounded-md items-center gap-2 cursor-pointer group hover:bg-custom-brown'>
+                        <Link to={'/lecturer/courses/'+[course_id]+'/new-lesson'} className='py-3 px-5 flex flex-row bg-custom-green-two rounded-md items-center gap-2 cursor-pointer group hover:bg-custom-brown'>
                             <p className='text-base font-medium text-white group-hover:text-custom-off-white'>Add Lesson</p>
                             <BsPencilSquare className='text-base text-white'/>
                         </Link>
@@ -53,9 +53,9 @@ function LectuerCourseContent() {
                         </p>    
                     </div>
                     <div className=' flex flex-col gap-0.5'>
-                        <Link to={'/lecturer/courses/'+course_id+'/enrolledstudents'} className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'><p>Enrolled Students: {courseDetails?.students?.length}</p></Link>
-                        <Link to={'/lecturer/courses/'+course_id+'/newassignment'} className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'><p>Add Assignments</p></Link>
-                        <Link to={'/lecturer/courses/'+course_id+'/newtest'} className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'><p>Create Test</p></Link>
+                        <Link to={'/lecturer/courses/'+[course_id]+'/enrolled-students'} className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'><p>Enrolled Students: {courseDetails?.students?.length}</p></Link>
+                        <Link to={'/lecturer/assignments/'+[course_id]+'/new-assignment'} className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'><p>Add Assignments</p></Link>
+                        <Link to={'/lecturer/tests/'+[course_id]+'/new-test'} className='border-b-2 py-3 text-base cursor-pointer border-custom-green-two hover:text-red-600 hover:border-red-600'><p>Create Test</p></Link>
                     </div>
                 </div>
             </div>
@@ -145,4 +145,4 @@ function LectuerCourseContent() {
   )
 }
 
-export default LectuerCourseContent
+export default LecturerCourseContent

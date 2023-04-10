@@ -23,27 +23,46 @@ function LecturerAssignmentContent() {
             .then((response) => {
                 setAssignmentDetails(response.data.assignments)
                 setCourseDetails(response.data)
+                
             });
         } catch (error) {
             console.log(error)
         }
     }, [])
+
+    
 
     useEffect(() => {
-        try {
-            axios.get(baseUrl+"/assignment/"+10+"/")
-            .then((response) => {
-                // setAssignmentDetails(response.data.assignments)
-                // setCourseDetails(response.data)
-            });
-        } catch (error) {
-            console.log(error)
+        async function fetchData() {
+            let response = await axios.get(baseUrl+"/assignments/");
+            setAssignmentContent(response.data)
         }
+
+        fetchData();
+        // try {
+        //     axios.get(baseUrl+"/assignments/")
+        //     .then((response) => {
+        //         setAssignmentContent(response.data)
+        //         // setCourseDetails(response.data)
+        //         // console.log(response.data)
+        //         // response?.data?.forEach(assignment => {
+        //         //     if (assignment.course.id === course_id){
+        //         //         console.log(assignment)
+        //         //         setAssignmentContent([
+        //         //             ...AssignmentContent, assignment
+        //         //         ])
+        //         //     }
+        //         // });
+        //         console.log(AssignmentContent)
+        //     });
+        // } catch (error) {
+        //     console.log(error)
+        // }
     }, [])
-    console.log("here")
+    // console.log("here")
 
 
-    console.log(courseDetails)
+    // console.log(courseDetails)
   return (
     <div className='px-10 py-11 h-full'>
         <div className='w-full p-6 bg-white rounded-md flex flex-col gap-6'>
@@ -63,7 +82,7 @@ function LecturerAssignmentContent() {
                 </div>
             </div>
             {/* Assignment Container */}
-            <div className='min-h-screen'>
+            {/* <div className='min-h-screen'>
                 <div className='flex flex-col gap-10'>
                         <div className='flex flex-col gap-4'>
                             <div className='relative mb-10'>
@@ -81,25 +100,29 @@ function LecturerAssignmentContent() {
                             </Link>
                         </div>
                 </div>
-            </div>
-            {/* {
-                AssignmentDetails ? AssignmentDetails?.map((assignment, id) => (
-                <div key={id} className='flex flex-col gap-10'>
-                    <div className='flex flex-col gap-4'>
-                        <div className='relative mb-10'>
-                            <h3 className='absolute -left-6 px-6 py-2.5 bg-custom-green-two text-white font-bold'>Assignment {id+1}</h3>
+            </div> */}
+            {
+                AssignmentContent && AssignmentContent?.map((assignment, id) => ( 
+                    <div key={id} className='flex flex-col gap-10'>
+                        <div className='flex flex-col gap-4'>
+                            <div className='relative mb-10'>
+                                <h3 className='absolute -left-6 px-6 py-2.5 bg-custom-green-two text-white font-bold'>Assignment {id+1}</h3>
+                            </div>
+                            <div className='flex flex-col gap-1.5'>
+                                <p className='font-semibold'>{assignment?.title}</p>
+                                <p className='text-black text-sm'>
+                                    {assignment?.body}
+                                </p> 
+                            </div>
                         </div>
-                        <div className='flex flex-col gap-1.5'>
-                            <p className='text-black text-sm'>
-                            </p> 
+                        <div className='flex flex-row justify-end mb-6'>
+                            <Link to={'/lecturer/assignments/'+courseDetails.id+'/submission'} className='w-fit '>
+                                <p className='text-sm py-3 px-5 font-medium bg-custom-green-two cursor-pointer hover:bg-custom-brown rounded-md text-white group-hover:text-custom-off-white'>View Submissions</p>
+                            </Link>
                         </div>
                     </div>
-                    <Link to={'/lecturer/assignments/'+courseDetails.id+'/submission'} className=' flex flex-row justify-end mb-6'>
-                    <p className='text-sm py-3 px-5 font-medium bg-custom-green-two cursor-pointer hover:bg-custom-brown rounded-md text-white group-hover:text-custom-off-white'>View Submissions</p>
-                    </Link>
-                </div>)): null
-            } */}
-            
+                ))
+            }
         </div>
     </div>
   )

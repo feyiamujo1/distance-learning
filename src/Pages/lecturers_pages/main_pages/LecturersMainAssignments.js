@@ -16,8 +16,6 @@ function LecturersMainAssignments() {
     
     async function fetchData() {
         let response = await axios.get(baseUrl+"/classes/courses_with_assignments/", config);
-        // let user = response.data;// Don't need await here
-        // setProduct(user);
         console.log(response.data.data);
         setLecturerAssignmentDetails(response.data.data);
     }

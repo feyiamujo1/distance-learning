@@ -19,6 +19,7 @@ import LecturerAssignmentSubmission from './LecturerAssignmentSubmission'
 import LecturerTestResult from './LecturerTestResult'
 import axios from 'axios'
 import useAuth from '../../hooks/UseAuth'
+import LecturersTestList from './LecturersTestList'
 const baseUrl = 'http://localhost:8000'
 
 function MainLecturerDashboard() {
@@ -65,6 +66,7 @@ function MainLecturerDashboard() {
             <Route path='/lecturer/assignments/:course_id/new-assignment' element={<LecturerAddAssignmentContent />}/>
             <Route path='/lecturer/assignments/:course_id/submission' element={<LecturerAssignmentSubmission />}/>
             <Route path='/lecturer/tests' element={<LecturerMainTests />} />
+            <Route path='/lecturer/tests/:course_id/list' element={<LecturersTestList />} />
             <Route path='/lecturer/tests/:course_id' element={<LecturerTestContent />} />
             <Route path='/lecturer/tests/:course_id/new-test' element={<LecturerCreateTestContent />} />
             <Route path='/lecturer/tests/:course_id/scores' element={<LecturerTestResult />}/>

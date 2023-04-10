@@ -1,0 +1,41 @@
+version: '3.8'
+services:
+  # db:
+  #   restart: always
+  #   image:
+  #   environment:
+  #     - name=value
+  #   ports:
+  #     - "3302:3306"
+  #   networks:
+  #     - db-net
+  backend:
+    # restart: always
+    # command: 
+    container_name: api
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - './backend:/app/backend'
+
+  frontend:
+    # restart: always
+    # command: npm start
+    container_name: react-frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    depends_on:
+      - backend
+    # networks:
+    #   - db-net
+
+# networks:
+#   db-net:
+#     driver: bridge

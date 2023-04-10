@@ -118,7 +118,20 @@ class QuizWithQuestionsSerializer(Serializer):
     questions = QuestionCreateSerializer(many=True, write_only=True)
 
 class QuizInlineSerializer(Serializer):
+    id = serializers.IntegerField()
     name = serializers.CharField()
+    date_created = serializers.DateTimeField()
+
+    def to_representation(self, instance):
+        data = super(QuizInlineSerializer, self).to_representation(instance)
+        quiz = Quiz.objects.filter(id=instance.id).first()
+        no_of_questions = quiz.questions.count()
+        data .update({
+            'questions_count': no_of_questions
+        })
+        return data
+
+
     # questions = QuestionListSerializer(many=True)
 
 class UserProfileField(serializers.RelatedField):

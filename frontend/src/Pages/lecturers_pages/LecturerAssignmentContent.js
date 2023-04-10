@@ -33,12 +33,12 @@ function LecturerAssignmentContent() {
     
 
     useEffect(() => {
-        async function fetchData() {
-            let response = await axios.get(baseUrl+"/assignments/");
-            setAssignmentContent(response.data)
-        }
+        // async function fetchData() {
+        //     let response = await axios.get(baseUrl+"/classes/course_assignments/"+course_id+"/");
+        //     setAssignmentContent(response.data)
+        // }
 
-        fetchData();
+        // fetchData();
         // try {
         //     axios.get(baseUrl+"/assignments/")
         //     .then((response) => {
@@ -70,7 +70,7 @@ function LecturerAssignmentContent() {
                 <div className='flex flex-col gap-2'>
                     <div className='flex flex-row justify-between items-center'>
                         <div className='flex flex-col'>
-                            <h1 className='text-3xl font-bold '>Assignment:{courseDetails.name}</h1>
+                            <h1 className='text-3xl font-bold '>Assignment: {courseDetails.name}</h1>
                             <p className='text-sm text-black font-bold'>Course Code: {courseDetails.session}</p>
                             <p className='text-sm font-bold text-custom-green-two'>Assignments: {AssignmentDetails?.length}</p>
                         </div>

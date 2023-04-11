@@ -1,6 +1,6 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
-import { Navigate, useParams } from 'react-router-dom';
+import React, { useEffect, useRef, useState } from 'react'
+import { useNavigate, useParams } from 'react-router-dom';
 import useAuth from '../../hooks/UseAuth';
 const baseUrl = 'http://localhost:8000';
 
@@ -16,6 +16,8 @@ function LecturerCreateTestContent() {
     const [questionCount, setQuestionCount] = useState(1);
     const [showQuestionInput, setShowQuestionInput] = useState(false);
     // const [quizIdGotten, setQuizIdGotten] = useState(false);
+
+    // useRef
     
 
     const { auth } = useAuth();
@@ -24,6 +26,7 @@ function LecturerCreateTestContent() {
     const [courseDetails, setCourseDetails] = useState({});
     const [quizId, setQuizId] = useState();
     const [quizReqInfo, setQuizReqInfo] = useState({name: "", created_for:""});
+    const navigate = useNavigate();
 
     // Fetch Course Content
     useEffect(() => {
@@ -134,9 +137,11 @@ function LecturerCreateTestContent() {
             }
         }).then((res) => {
             console.log(res);
-            document.getElementById('myform').reset();
-            document.getElementById('myform').reset();
+            navigate("/lecturer/courses/"+course_id)
+            // document.getElementById('myform').reset();
+            // document.getElementById('myform').reset();
             // Add snack bar here for success
+
             
         }).catch((error) => {
             console.error(error);
@@ -163,7 +168,7 @@ function LecturerCreateTestContent() {
                     </div>
                 </form>
             </div>
-            <form id="testForm" onSubmit={SubmitTest} className='flex flex-col gap-10'>
+            <form onSubmit={SubmitTest} className='flex flex-col gap-10'>
                 {Array.apply(null, {length: questionCount}).map((e, i)=>(
                 <div className='flex flex-col gap-5'>
                     <div>

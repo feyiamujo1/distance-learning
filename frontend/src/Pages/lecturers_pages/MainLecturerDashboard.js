@@ -67,7 +67,7 @@ function MainLecturerDashboard() {
             <Route path='/lecturer/assignments/:course_id/submission' element={<LecturerAssignmentSubmission />}/>
             <Route path='/lecturer/tests' element={<LecturerMainTests />} />
             <Route path='/lecturer/tests/:course_id/list' element={<LecturersTestList />} />
-            <Route path='/lecturer/tests/:course_id' element={<LecturerTestContent />} />
+            <Route path='/lecturer/tests/:course_id/:quiz_id' element={<LecturerTestContent />} />
             <Route path='/lecturer/tests/:course_id/new-test' element={<LecturerCreateTestContent />} />
             <Route path='/lecturer/tests/:course_id/scores' element={<LecturerTestResult />}/>
             <Route path='/lecturer/details' element={<UserInfoPage />} />

@@ -38,10 +38,7 @@ function LecturerTestContent() {
         
     }, []);
 
-    // Get Test ID
-    // useEffect(() => {
-        
-    // }, [quiz_id]);
+    
     console.log(courseDetails)
     console.log(testContent)
 
@@ -54,7 +51,7 @@ function LecturerTestContent() {
                     <p className='text-sm text-black font-bold'>Course Code: {courseDetails.session}</p>
                     <p className='text-sm font-bold text-custom-green-two'>Questions: {testContent?.questions?.length}</p>
                 </div>
-                <Link to={'/lecturer/tests/'+course_id+'/scores'} className='py-3 px-5 flex flex-row bg-custom-green-two rounded-md items-center gap-2 cursor-pointer group hover:bg-custom-brown'>
+                <Link to={'/lecturer/tests/'+course_id+'/'+quiz_id+'/scores'} className='py-3 px-5 flex flex-row bg-custom-green-two rounded-md items-center gap-2 cursor-pointer group hover:bg-custom-brown'>
                     <p className='text-base font-medium text-white group-hover:text-custom-off-white'>Show Result</p>
                     <MdScore className='text-lg text-white'/>
                 </Link>
@@ -64,27 +61,27 @@ function LecturerTestContent() {
                 <div className='flex flex-col gap-6'>
                     {
                         testContent?.questions ? testContent?.questions?.map((content, id) => (
-                            <div key={id} className='flex flex-col gap-4'>
+                            <div key={id} className='flex flex-col gap-4 border-t pt-6'>
                                 <div className='relative mb-10'>
-                                    <h3 className='absolute -left-6 px-6 py-2.5 bg-custom-green-two text-white font-bold'>Question 1</h3>
+                                    <h3 className='absolute -left-6 px-6 py-2.5 bg-custom-green-two text-white font-bold'>Question {id+1}</h3>
                                 </div>
                                 <div className='flex flex-col gap-3'>
                                     <p>{content.body} </p>
                                     <div className='flex flex-col gap-2'>
-                                        <div className='flex flex-row gap-2 justify-center cursor-pointer w-fit text-custom-green-two group'>
-                                            <input className='text-4xl cursor-pointer checked:bg-custom-green-two accent-custom-green-two' type='checkbox' id='option1' name='question1' value={content.correct_answer.body} checked readOnly/>
+                                        <div className='flex flex-row gap-2 justify-center cursor-pointer w-fit text-custom-green-two group pointer-events-none'>
+                                            <input className='text-4xl cursor-pointer checked:bg-custom-green-two accent-custom-green-two' type='checkbox' id={`correct_answer${id+1}`} name={`correct_answer${id+1}`} value={content.correct_answer.body} checked readOnly/>
                                             <label className='cursor-pointer' for='option1'>{content.correct_answer.body}</label>
                                         </div>
-                                        <div className='flex flex-row gap-2 justify-center cursor-pointer w-fit opacity-70'>
-                                            <input className='text-4xl cursor-pointer' type='checkbox' id='option2' name='question1' value={content.incorrect_answers[0].body} readOnly/>
+                                        <div className='flex flex-row gap-2 justify-center cursor-pointer w-fit opacity-70 pointer-events-none'>
+                                            <input className='text-4xl cursor-pointer  accent-white' type='checkbox' id={`wrong_answer[0]${id+1}`} name={`wrong_answer[0]${id+1}`} value={content.incorrect_answers[0].body} readOnly/>
                                             <label className='cursor-pointer' for='option2'>{content.incorrect_answers[0].body}</label>
                                         </div>
-                                        <div className='flex flex-row gap-2 justify-center cursor-pointer w-fit opacity-70'>
-                                            <input className='text-4xl cursor-pointer' type='checkbox' id='option3' name='question1' value={content.incorrect_answers[1].body} readOnly/>
-                                            <label className='cursor-pointer' for='option3'>{content.incorrect_answers[1].body}</label>
+                                        <div className='flex flex-row gap-2 justify-center cursor-pointer w-fit opacity-70 pointer-events-none'>
+                                            <input className='text-4xl cursor-pointer' type='checkbox' id='option3' name={'question'+id+1} value={content.incorrect_answers[1].body} readOnly/>
+                                            <label className='cursor-pointer' htmlFor='option3'>{content.incorrect_answers[1].body}</label>
                                         </div>
-                                        <div className='flex flex-row gap-2 justify-center cursor-pointer w-fit opacity-70'>
-                                            <input className='text-4xl cursor-pointer' type='checkbox' id='option4' name='question1' value={content.incorrect_answers[2].body} readOnly/>
+                                        <div className='flex flex-row gap-2 justify-center cursor-pointer w-fit opacity-70 pointer-events-none'>
+                                            <input className='text-4xl cursor-pointer' type='checkbox' id='option4' name={'question'+id+1} value={content.incorrect_answers[2].body} readOnly/>
                                             <label className='cursor-pointer peer-checked:text-custom-green-two' for='option4'>{content.incorrect_answers[2].body}</label>
                                         </div>
                                     </div>

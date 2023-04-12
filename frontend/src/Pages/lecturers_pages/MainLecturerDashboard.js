@@ -69,7 +69,7 @@ function MainLecturerDashboard() {
             <Route path='/lecturer/tests/:course_id/list' element={<LecturersTestList />} />
             <Route path='/lecturer/tests/:course_id/:quiz_id' element={<LecturerTestContent />} />
             <Route path='/lecturer/tests/:course_id/new-test' element={<LecturerCreateTestContent />} />
-            <Route path='/lecturer/tests/:course_id/scores' element={<LecturerTestResult />}/>
+            <Route path='/lecturer/tests/:course_id/:quiz_id/scores' element={<LecturerTestResult />}/>
             <Route path='/lecturer/details' element={<UserInfoPage />} />
           </Routes>
           {/* <LecturerEnrolledStudents /> */}

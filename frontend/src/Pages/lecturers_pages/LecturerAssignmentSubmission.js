@@ -40,7 +40,7 @@ function LecturerAssignmentSubmission() {
                             <th>Submission</th>
                         </tr>
                         
-                        {/* {
+                        {
                             assignmentSubmissionList ? assignmentSubmissionList.map((student, index) =>
                             <tr className='w-full flex flex-row text-left gap-6 items-center'>
                                 <td className='w-6 text-center'>{index + 1}</td>
@@ -51,19 +51,19 @@ function LecturerAssignmentSubmission() {
                             </tr>
                         )
                             : null
-                        } */}
-                        <tr className='w-full flex flex-row text-left gap-6 items-center'>
+                        }
+                        {/* <tr className='w-full flex flex-row text-left gap-6 items-center'>
                             <td className='w-6 text-center'>{1}</td>
-                            <td className='w-44'>{/*<img className='w-14 h-14 rounded-full' src={student.image} alt="team"/>*/}<span>Odunsi Joseph</span></td> 
+                            <td className='w-44'><img className='w-14 h-14 rounded-full' src={student.image} alt="team"/><span>Odunsi Joseph</span></td> 
                             <td className='w-36'>22/03CMP010</td>
                             <td className='text-custom-green-two underline cursor-pointer hover:text-custom-brown'>Click to Download</td>                
                         </tr>
                         <tr className='w-full flex flex-row text-left gap-6 items-center'>
                             <td className='w-6 text-center'>{2}</td>
-                            <td className='w-44'>{/*<img className='w-14 h-14 rounded-full' src={student.image} alt="team"/>*/}<span>Taslim Owolarafe</span></td> 
+                            <td className='w-44'><img className='w-14 h-14 rounded-full' src={student.image} alt="team"/><span>Taslim Owolarafe</span></td> 
                             <td className='w-36'>22/03CMP001</td>
                             <td className='text-custom-green-two underline cursor-pointer hover:text-custom-brown'>Click to Download</td>                
-                        </tr>
+                        </tr> */}
                     </table>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/UseAuth';
 const baseUrl = 'http://localhost:8000';
 
@@ -10,6 +10,7 @@ function LecturerAddAssignmentContent() {
     let {course_id} = useParams();
     const [courseDetails, setCourseDetails] = useState({});
     const [assignmentData, setAssignmentData] = useState({given_to: null, title: "", body: "", attachment: null, deadline: null})
+    const navigate = useNavigate();
 
     // Fetch Course Content
     useEffect(() => {
@@ -42,6 +43,7 @@ function LecturerAddAssignmentContent() {
             data: assignmentData
         }).then((res) => {
             console.log(res);
+            navigate('/lecturer/assignment/'+course_id)
 
         }).catch((error) => {
             console.error(error)

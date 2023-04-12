@@ -1,34 +1,43 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { Link, useParams } from 'react-router-dom';
+import useAuth from '../../hooks/UseAuth';
+import { HiHome } from 'react-icons/hi2'
+const baseUrl = 'http://localhost:8000'
 
 function LecturerTestResult() {
-    const [testScoreList, setTestScoreList] = useState();
-    const [statusNote, setStatusNote] = useState("")
-    const url = 'https://fakerapi.it/api/v1/persons?_quantity=10' 
+    const [testScoreList, setTestScoreList] = useState([]);
+    // const { auth } = useAuth();
+    // const token = auth.token;
+    let {course_id, quiz_id} = useParams();
+    const [courseDetails, setCourseDetails] = useState({});
 
     useEffect(() => {
-        axios.get(url)
-          .then(response => {
-            if (response.status === 200) {
-              setStatusNote("")
-              setTestScoreList(response.data.data)
-            } else {
-              setStatusNote("Error while loading data, please Kindly refresh the page!")
-            }
-          })
+        try {
+            axios.get(baseUrl+"/classes/"+course_id+"/")
+            .then((response) => {
+                setCourseDetails(response.data)
+                console.log(courseDetails)
+            });
+        } catch (error) {
+            console.log(error)
+        }
       }, [])
   return (
     <div className='px-10 py-11 h-full'>
         <div className='w-full p-6 min-h-screen bg-white rounded-md flex flex-col gap-6'>
-            <div className='flex flex-col'>
-                <h1 className='text-3xl font-bold '>Introduction to Programming</h1>
-                <p className='text-sm text-black font-bold'>Course Code: CMP321</p>
-                <p className='text-sm font-bold text-custom-green-two'>Total: 10</p>
+            <div className='flex flex-row justify-between items-end'>
+                <div className='flex flex-col'>
+                    <h1 className='text-3xl font-bold '>Test Name - {courseDetails.name}</h1>
+                    <p className='text-sm text-black font-bold'>Course Code: {courseDetails.session}</p>
+                    <p className='text-sm font-bold text-custom-green-two'>Number of Submissions: {/*testContent?.questions?.length*/}</p>
+                </div>
+                <Link to={'/lecturer/courses/'+course_id} className='py-3 px-5 flex flex-row bg-custom-green-two rounded-md items-center gap-2 cursor-pointer group hover:bg-custom-brown'>
+                    <p className='text-base font-medium text-white group-hover:text-custom-off-white'>Go Home</p>
+                    <HiHome className='text-lg text-white'/>
+                </Link>
             </div>
             <div>
-                <p className=''>
-                    {statusNote}
-                </p>
                 <div className='w-full box-border'>
                     <table className='w-full flex flex-col gap-6'>
                         <tr className='w-full flex flex-row gap-6 py-2 text-base text-white text-left items-center bg-custom-green-two'>

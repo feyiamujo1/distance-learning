@@ -41,8 +41,6 @@ function StudentDashboard() {
                     View All
                 </Link>
             </div>
-            
-        
         </div>
         <div className='min-h-fit w-full p-6 bg-white rounded-md shadow-sm flex flex-col gap-4'>
             <h1 className='text-lg font-bold text-custom-green-two'>My Latest Courses</h1>

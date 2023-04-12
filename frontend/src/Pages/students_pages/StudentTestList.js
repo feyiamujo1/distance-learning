@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { HiHome } from 'react-icons/hi2'
 const baseUrl = 'http://localhost:8000'
 
-const LecturersTestList = () => {
+const StudentTestList = () => {
     let {course_id, quiz_id} = useParams();
     
     const [testDetails, setTestDetails] = useState([]);
@@ -75,12 +75,12 @@ const LecturersTestList = () => {
                                     </p> 
                                 </div>
                             </div>
-                            <div className='flex flex-row w-full justify-between'>
-                                <Link to={'/lecturer/tests/'+course_id+'/'+content.id} className='w-fit mb-6'>
+                            <div className='flex flex-row w-full justify-end'>
+                                {/* <Link to={'/lecturer/tests/'+course_id+'/'+content.id} className='w-fit mb-6'>
                                     <p className='text-sm py-3 px-5 font-medium bg-custom-green-two cursor-pointer hover:bg-custom-brown rounded-md text-white group-hover:text-custom-off-white'>View Questions</p>
-                                </Link>
-                                <Link to={'/lecturer/tests/'+course_id+'/'+content.id+'/scores'} className='w-fit mb-6'>
-                                    <p className='text-sm py-3 px-5 font-medium bg-custom-green-two cursor-pointer hover:bg-custom-brown rounded-md text-white group-hover:text-custom-off-white'>View Results</p>
+                                </Link> */}
+                                <Link to={'/student/tests/'+course_id+'/'+content.id} className='w-fit mb-6'>
+                                    <p className='text-sm py-3 px-5 font-medium bg-custom-green-two cursor-pointer hover:bg-custom-brown rounded-md text-white group-hover:text-custom-off-white'>View Test</p>
                                 </Link>
                             </div>
                         </div>
@@ -92,4 +92,4 @@ const LecturersTestList = () => {
   )
 }
 
-export default LecturersTestList
+export default StudentTestList

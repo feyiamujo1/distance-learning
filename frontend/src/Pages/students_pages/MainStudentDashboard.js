@@ -14,6 +14,7 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 import UserInfoPage from '../UserInfoPage'
 import axios from 'axios'
 import useAuth from '../../hooks/UseAuth'
+import StudentTestList from './StudentTestList'
 const baseUrl = 'http://localhost:8000'
 
 function MainStudentDashboard() {
@@ -52,7 +53,8 @@ function MainStudentDashboard() {
             <Route path='/student/assignments' element={<StudentMainAssignment />} />
             <Route path='/student/assignments/:course_id' element={<StudentAssignmentContent />} />
             <Route path='/student/tests' element={<StudentMainTests />} />
-            <Route path='/student/tests/:course_id' element={<StudentTestContent />} />
+            <Route path='/student/tests/:course_id/list' element={<StudentTestList />} />
+            <Route path='/student/tests/:course_id/:quiz_id' element={<StudentTestContent />} />
             <Route path='/student/details' element={<UserInfoPage />} />
           </Routes>
         </div>

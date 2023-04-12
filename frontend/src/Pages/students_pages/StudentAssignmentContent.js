@@ -44,25 +44,27 @@ function StudentAssignmentContent() {
                 </div>
             </div>
             {/* Assignment Container */}
-            <div className='flex flex-col gap-10'>
-                <div className='flex flex-col gap-4'>
-                    <div className='relative mb-10'>
-                        <h3 className='absolute -left-6 px-6 py-2.5 bg-custom-green-two text-white font-bold'>Assignment 1</h3>
+            <div className='flex flex-col gap-6'>
+                <div className='flex flex-col gap-10 border-t pt-6'>
+                    <div className='flex flex-col gap-4 '>
+                        <div className='relative mb-10'>
+                            <h3 className='absolute -left-6 px-6 py-2.5 bg-custom-green-two text-white font-bold'>Assignment 1</h3>
+                        </div>
+                        {/* <h2 className='text-xl font-bold'>Low Level Language</h2> */}
+                        <div className='flex flex-col gap-1.5'>
+                            {/* <p className='text-xs font-bold border-b-2'>Question/Descriptions</p> */}
+                            <p className='text-black text-sm'>
+                                Perform a research on the types of Machine learning and thoroughly explaining each type and give one example. Also provide real life applicable examples for each type.
+                            </p> 
+                        </div>
+                        <div className=' flex flex-col gap-2'>
+                            <p className='text-xs font-medium text-custom-brown'>Make Submissions here</p>
+                            <input type='file' className='w-fit cursor-pointer hover:text-custom-green-two'/>
+                        </div>
                     </div>
-                    {/* <h2 className='text-xl font-bold'>Low Level Language</h2> */}
-                    <div className='flex flex-col gap-1.5'>
-                        {/* <p className='text-xs font-bold border-b-2'>Question/Descriptions</p> */}
-                        <p className='text-black text-sm'>
-                            Perform a research on the types of Machine learning and thoroughly explaining each type and give one example. Also provide real life applicable examples for each type.
-                        </p> 
+                    <div className=' flex flex-row justify-end mb-6'>
+                    <p className='text-sm py-3 px-5 font-medium bg-custom-green-two cursor-pointer hover:bg-custom-brown rounded-md text-white group-hover:text-custom-off-white'>Submit</p>
                     </div>
-                    <div className=' flex flex-col gap-2'>
-                        <p className='text-xs font-medium text-custom-brown'>Make Submissions here</p>
-                        <input type='file' className='w-fit cursor-pointer hover:text-custom-green-two'/>
-                    </div>
-                </div>
-                <div className=' flex flex-row justify-end mb-6'>
-                  <p className='text-sm py-3 px-5 font-medium bg-custom-green-two cursor-pointer hover:bg-custom-brown rounded-md text-white group-hover:text-custom-off-white'>Submit</p>
                 </div>
             </div>
         </div>

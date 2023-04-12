@@ -30,7 +30,7 @@ function StudentMainAssignment() {
         <div className='min-h-screen w-full p-6 bg-white rounded-md flex flex-col gap-4'>
             <div className='flex flex-row justify-between'>
                 <h1 className='text-lg font-bold text-custom-green-two'>My Assignments</h1>
-                <p className='font-bold text-custom-green-two'>Total: 4</p>
+                <p className='font-bold text-custom-green-two'>Total: {studentAssignmentDetails.length}</p>
             </div>
             <div className='flex flex-wrap justify-around gap-2'>
                 {

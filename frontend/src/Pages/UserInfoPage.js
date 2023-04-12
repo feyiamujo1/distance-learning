@@ -38,7 +38,7 @@ function UserInfoPage() {
             <div className='flex flex-col w-fit gap-3 items-start'>
                 {/* <HiUserCircle className='text-custom-green-two text-[150px] p-0 m-0 hover:text-[#81a591] border'/> */}
                 <img className='w-40' src={userImage} alt="profile" />
-                <input className='p-0 m-0 border' type='file' accept='image/*' name='user_profile' id='user_profile'/>
+                {/* <input className='p-0 m-0 border' type='file' accept='image/*' name='user_profile' id='user_profile'/> */}
             </div>
             <div className='flex flex-col w-full mb-6'>
                 <p className='text-xl py-4 border-y-2'>Name: {userInfo.firstname + " " + userInfo.lastname}</p>

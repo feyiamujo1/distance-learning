@@ -34,7 +34,7 @@ function LecturerMainTests() {
             <div className='flex flex-wrap justify-around gap-2'>
                 {   
                     lecturerTestDetails?.map((test, id) => (
-                        <Link key={id} to={'/lecturer/tests/'+test.id+"/list"} className='w-[230px] h-fit flex flex-col justify-between gap-4 py-6 px-5 pb-4 mb-5 box-border shadow-nav-shadow rounded-md group cursor-pointer hover:bg-custom-off-white ease-in-out duration-500 hover:-translate-y-3.5'>
+                        <Link key={id} to={'/lecturer/tests/'+test.id+'/list'} className='w-[230px] h-fit flex flex-col justify-between gap-4 py-6 px-5 pb-4 mb-5 box-border shadow-nav-shadow rounded-md group cursor-pointer hover:bg-custom-off-white ease-in-out duration-500 hover:-translate-y-3.5'>
                             <div className='flex flex-col justify-between gap-4'>
                                 <div className='w-full rounded-md pb-2'>
                                     <img className='w-full h-44 rounded-md' src={TestBgImage} alt='coursebg'/>

@@ -60,8 +60,8 @@ function LecturerCourseContent() {
                 </div>
             </div>
             {/* Lesson Container */}
-            <div className='flex flex-col gap-10'>
-                <div className='flex flex-col gap-4'>
+            <div className='flex flex-col gap-10 '>
+                <div className='flex flex-col gap-4 pt-6 border-t' >
                     <div className='relative mb-10'>
                         <h3 className='absolute -left-6 px-6 py-2.5 bg-custom-green-two text-white font-bold'>Lesson 1</h3>
                     </div>

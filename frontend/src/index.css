@@ -13,7 +13,7 @@ body {
 }
 
 /* Css for autofill background issshh */
-#username-webkit-autofill, #password-webkit-autofill,
+/* #username-webkit-autofill, #password-webkit-autofill,
 #username-webkit-autofill:hover, #password-webkit-autofill:hover,
 #username-webkit-autofill:focus, #password-webkit-autofill:focus{
   transition: background-color 5000s;
@@ -24,14 +24,14 @@ body {
   font-size: inherit;
   cursor: white;
   
-}
-.input {
+} */
+/* .input {
   -webkit-background-clip: text !important;
   background-clip:  text !important;
 }
 input, input:focus,input:hover, input:active{
   box-shadow: 0 0 0 rgb(255, 255, 255) !important;
-}
+} */
 
 
 input:-webkit-autofill, 

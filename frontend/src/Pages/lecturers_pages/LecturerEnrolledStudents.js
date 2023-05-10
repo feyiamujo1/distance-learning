@@ -1,22 +1,6 @@
 import React from 'react'
 
 function LecturerEnrolledStudents() {
-
-    // const [productItems, setProductItems] = useState([])
-    // const [statusNote, setStatusNote] = useState("")
-    // const url = 'https://fakerapi.it/api/v1/products?_quantity=15'
-
-    // useEffect(() => {
-    // axios.get(url)
-    // .then(response => {
-    // if(response.status === 200){
-    //     setStatusNote("")
-    //     setProductItems(response.data.data)
-    // }else{
-    //     setStatusNote("Error while loading data, please refresh the page")
-    // }
-    // })
-//   }, [])
   return (
     <div className='px-10 py-11 h-full'>
         <div className='w-full p-6 bg-white rounded-md flex flex-col gap-4'>

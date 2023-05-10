@@ -40,8 +40,9 @@ input:-webkit-autofill:focus,
 textarea:-webkit-autofill, 
 textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus{
-  transition: background-color 5000s;
-  -webkit-text-fill-color: #fff !important;
+  -webkit-background-clip: text !important;
+  background-clip:  text !important;
+  -webkit-text-fill-color: white !important;
   -webkit-box-shadow: none;
   box-shadow: none;
   font-family: poppins;
@@ -49,6 +50,7 @@ textarea:-webkit-autofill:focus{
   cursor: white;
   
 }
+
 
 /* #email, #password {
   -webkit-background-clip: text !important;

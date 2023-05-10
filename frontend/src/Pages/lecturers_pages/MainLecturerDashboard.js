@@ -32,7 +32,7 @@ function MainLecturerDashboard() {
   axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
   const [lecturerDetails, setLecturerDetails] = useState({});
 
-  // Fetch All Student Details
+  // Fetch Main Lecturer's Details
   useEffect(() => {
       try {
           axios.get(baseUrl+"/teachers/"+lecturer_id+"/")
@@ -45,7 +45,7 @@ function MainLecturerDashboard() {
     
   }, [lecturer_id])
     
-    console.log(lecturerDetails);
+  console.log(lecturerDetails);
   const lecturer_firstname = lecturerDetails.firstname;
 
   return (
@@ -64,7 +64,7 @@ function MainLecturerDashboard() {
             <Route path='/lecturer/assignments' element={<LecturersMainAssignments />} />
             <Route path='/lecturer/assignments/:course_id' element={<LecturerAssignmentContent />} />
             <Route path='/lecturer/assignments/:course_id/new-assignment' element={<LecturerAddAssignmentContent />}/>
-            <Route path='/lecturer/assignments/:course_id/submission' element={<LecturerAssignmentSubmission />}/>
+            <Route path='/lecturer/assignments/:course_id/:assignment_id/submission' element={<LecturerAssignmentSubmission />}/>
             <Route path='/lecturer/tests' element={<LecturerMainTests />} />
             <Route path='/lecturer/tests/:course_id/list' element={<LecturersTestList />} />
             <Route path='/lecturer/tests/:course_id/:quiz_id' element={<LecturerTestContent />} />

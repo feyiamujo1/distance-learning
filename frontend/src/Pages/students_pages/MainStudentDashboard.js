@@ -20,6 +20,8 @@ const baseUrl = 'http://localhost:8000'
 function MainStudentDashboard() {
   const { auth } = useAuth();
   const student_id = auth.user_id;
+  const token = auth.token;
+  axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
   const [studentDetails, setStudentDetails] = useState({});
 
   // Fetch All Student Details
@@ -33,9 +35,9 @@ function MainStudentDashboard() {
           console.log(error)
       }
     
-  }, [])
+  }, [student_id])
     
-    console.log(studentDetails);
+  console.log(studentDetails);
   const student_firstname = studentDetails.firstname;
 
   return (

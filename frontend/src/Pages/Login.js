@@ -78,11 +78,11 @@ function Login() {
             <form onSubmit={submitHandler} className='flex flex-col gap-4'>
               <div className='group relative flex flex-row items-center rounded-md px-4 border-2 border-custom-brown hover:border-custom-green'>
                 <BiUserCircle className='mr-2 text-2xl text-custom-brown group-hover:text-custom-green'/>
-                <input className='w-full text-base py-4 text-white border-none bg-transparent autofill:bg-[#111820] outline-none caret-white' type="email" placeholder='Email' required name="username" id="username" autoComplete='off' onChange={handleChange}/>
+                <input className='w-full text-base py-4 text-white border-none bg-transparent outline-none caret-white' type="email" placeholder='Email' required name="username" id="username" autoComplete='off' onChange={handleChange}/>
               </div>
               <div className='group relative flex flex-row items-center rounded-md px-4 border-2 border-custom-brown hover:border-custom-green'>
                 <BiLock className='mr-2.5 text-2xl text-custom-brown group-hover:text-custom-green'/>
-                <input className='w-full text-base py-4 text-white caret-white border-none bg-transparent outline-none care' type="password" placeholder='Password' required id="password" name="password" onChange={handleChange}/>
+                <input className='w-full text-base py-4 text-white caret-white border-none bg-transparent outline-none care focus:bg-transparent' type="password" placeholder='Password' required id="password" name="password" onChange={handleChange}/>
               </div>
               <div>
                 <div className='group cursor-pointer w-fit'>

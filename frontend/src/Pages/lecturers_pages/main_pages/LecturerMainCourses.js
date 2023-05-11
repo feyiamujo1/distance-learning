@@ -21,7 +21,7 @@ function LecturerMainCourses() {
             console.log(error)
         }
         
-    })
+    }, [])
     console.log(lecturerDetails)
 
   return (

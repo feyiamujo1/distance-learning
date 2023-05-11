@@ -24,7 +24,7 @@ function LecturerAssignmentSubmission() {
 
     useEffect(() => {
         try {
-          axios.get(baseUrl+"/assignments/solutions/assignment/")
+          axios.get(baseUrl+"/assignments/solutions/assignment/"+assignment_id+"/")
           .then((response) => {
             setAssignmentSubmissionList(response.data);
           });
@@ -44,7 +44,7 @@ function LecturerAssignmentSubmission() {
                             <p className='text-sm text-black font-bold'>Course Code: {courseDetails?.session}</p>
                             <p className='text-sm font-bold text-custom-green-two'>Submissions: {courseDetails?.students?.length}</p>
                         </div>
-                        <Link to={'/lecturer/courses/'+courseDetails.id} className='py-3 px-5 flex flex-row bg-custom-green-two rounded-md items-center gap-2 cursor-pointer group hover:bg-custom-brown'>
+                        <Link to={'/lecturer/assignments/'+courseDetails.id} className='py-3 px-5 flex flex-row bg-custom-green-two rounded-md items-center gap-2 cursor-pointer group hover:bg-custom-brown'>
                             <p className='text-base font-medium text-white group-hover:text-custom-off-white'>Test Home</p>
                             <HiHome className='text-base text-white'/>
                         </Link>
@@ -59,7 +59,7 @@ function LecturerAssignmentSubmission() {
                         <th className='w-36 border-l py-2 px-4'>Matric No.</th>
                         <th className='border-l py-2 px-4'>Email</th>
                     </tr>
-                    <p className='text-red-700 font-medium text-center py-2'>{list + "Hhere"} Reminder to work on the the endpoint is returning error</p>
+                    <p className='text-red-700 font-medium text-center py-2'>Here is a reminder to work on the the endpoint this as the endpoint is returning error</p>
                     <div>
                         {assignmentSubmissionList?.map((submissions) => 
                             submissions.id === parseInt(assignment_id) ?

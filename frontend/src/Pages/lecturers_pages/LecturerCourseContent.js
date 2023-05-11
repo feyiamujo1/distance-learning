@@ -23,7 +23,7 @@ function LecturerCourseContent() {
             console.log(error)
         }
         
-    });
+    }, []);
     console.log(courseDetails);
 
   return (
